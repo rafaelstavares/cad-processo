@@ -17,7 +17,13 @@ public class ControleProcesso {
 
     @Autowired
     ProcessoDao processoDao;
-
+/*
+*
+*
+* funções tipo processo
+*
+*
+* */
     @RequestMapping("/cadtipoprocesso")
     public String showform(Model m){
         m.addAttribute("command", new TipoProcesso());
@@ -65,4 +71,13 @@ public class ControleProcesso {
         processoDao.delete(id);
         return "redirect:/viewtipoprocesso";
     }
+
+    /*
+     *
+     *
+     * funções processo
+     *
+     *
+     * */
+
 }
