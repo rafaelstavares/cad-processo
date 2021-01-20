@@ -6,13 +6,53 @@
 </head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <body>
+<br>
+<br>
+<br>
 
-<br/>
-<a href="">Hello Servlet</a>
+<div class="container-fluid">
+    <header>
+
+        <ul class="nav p-2 justify-content-center">
+            <li class="nav-item p-2">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                        Tipos de Processo
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="cadtipoprocesso">Cadastrar Tipos Processos</a>
+                        <a class="dropdown-item" href="viewtipoprocesso">Editar Processos</a>
+                        <a class="dropdown-item" href="listartipoprocesso">Listar Processos</a>
+
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item p-2">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                        Processos
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Cadastrar Processos</a>
+                        <a class="dropdown-item" href="#">Editar Processo</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Procurar Processo</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
