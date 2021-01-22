@@ -56,12 +56,12 @@ public class ProcessoDao {
     */
     public int saveProcesso(Processo p) {
 
-        String sql = "insert into processo (tipoProcesso,numeroProcesso,dataprocesso,valorProcesso, objetivo) values('" + p.getTipoProcesso() + "','" + p.getNumeroProcesso() + "','" + p.getDataEntrada() + "','" + p.getObjetivo() + "')";
+        String sql = "insert into processo (tipoProcesso,numeroProcesso,dataEntrada,valorProcesso, objetivo) values('" + p.getTipoProcesso() + "','" + p.getNumeroProcesso() + "','" + p.getDataEntrada() + "','" + p.getValorProcesso() +"','" + p.getObjetivo() + "')";
         return template.update(sql);
     }
 
     public int updateProcesso(Processo p) {
-        String sql = "update processo set tipoProcesso='" + p.getTipoProcesso() + "',dataProcesso='" + p.getDataEntrada() + "',valorProcesso='" + p.getTipoProcesso() + "',objetivo'" + p.getObjetivo() + "' where id=" + p.getId() + "";
+        String sql="update processo set tipoProcesso='"+p.getTipoProcesso()+"',numeroProcesso='"+p.getNumeroProcesso()+"',dataEntrada='"+p.getDataEntrada()+"',valorProcesso='"+p.getValorProcesso()+"',objetivo='"+p.getObjetivo()+ "' where id='"+p.getId()+"' ";
         return template.update(sql);
     }
 
@@ -83,7 +83,7 @@ public class ProcessoDao {
                 e.setTipoProcesso(rs.getString(2));
                 e.setNumeroProcesso(rs.getInt(3));
                 e.setDataEntrada(rs.getDate(4));
-                e.setValorRecurso(rs.getFloat(5));
+                e.setValorProcesso(rs.getFloat(5));
                 e.setObjetivo(rs.getString(6));
 
 

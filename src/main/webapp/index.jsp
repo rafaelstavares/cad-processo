@@ -15,7 +15,7 @@
 <br>
 <br>
 
-<div class="container-fluid">
+<div class="container">
     <header>
 
         <ul class="nav p-2 justify-content-center">
@@ -41,10 +41,10 @@
                         Processos
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Cadastrar Processos</a>
-                        <a class="dropdown-item" href="#">Editar Processo</a>
+                        <a class="dropdown-item" href="cadprocesso">Cadastrar Processos</a>
+                        <a class="dropdown-item" href="viewprocesso">Editar Processo</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Procurar Processo</a>
+                        <a class="dropdown-item" href="listarprocesso">Procurar Processo</a>
                     </div>
                 </div>
             </li>

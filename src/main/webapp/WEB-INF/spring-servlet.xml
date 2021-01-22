@@ -23,12 +23,31 @@
         <property name="username" value="root"></property>
         <property name="password" value="root"></property>
     </bean>
-
+    <mvc:annotation-driven/>
     <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="ds"></property>
     </bean>
 
     <bean id="dao" class="br.com.cad_processo.ProcessoDao">
         <property name="template" ref="jt"></property>
+    </bean>
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="registerDefaultFormatters" value="false" />
+        <property name="formatters">
+            <set>
+                <bean class="org.springframework.format.number.NumberFormatAnnotationFormatterFactory" />
+            </set>
+        </property>
+        <property name="formatterRegistrars">
+            <set>
+                <bean class="org.springframework.format.datetime.standard.DateTimeFormatterRegistrar">
+                    <property name="dateFormatter">
+                        <bean class="org.springframework.format.datetime.standard.DateTimeFormatterFactoryBean">
+                            <property name="pattern" value="ddMMyyyy"/>
+                        </bean>
+                    </property>
+                </bean>
+            </set>
+        </property>
     </bean>
 </beans>

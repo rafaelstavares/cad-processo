@@ -31,6 +31,7 @@
         </div>
         <div class="form-group col-md-8">
             <input class="btn btn-primary" type="submit" value="Adicionar Tipo"/>
+            <a class="btn btn-info" role="button" href="index.jsp">Inicio</a>
         </div>
     </div>
 
