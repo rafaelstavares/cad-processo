@@ -2,7 +2,7 @@
 <h3>Criando image/docker</h3>
 cd Docker
 <br>
-<code>#$docker build -t rafaelst/cad-processo</code>
+<code>#$docker build -t rafaelst/cad-processo .</code>
 <br>
 <h3>Criando link <coded>db::web</code>com compose</h3>
 $cd Compose
