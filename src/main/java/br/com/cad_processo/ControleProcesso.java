@@ -6,10 +6,7 @@ import modelo.TipoProcesso;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -143,6 +140,19 @@ public class ControleProcesso {
         m.addAttribute("listaP", listTipoProcesso);
         m.addAttribute("command", emp);
         return "editarprocesso";
+    }
+
+    @RequestMapping(value = "/buscarNumProcesso")
+    public String buscarNumProcesso(@RequestParam("numeroProcesso") String numeroProcesso, Model m) {
+
+        Processo emp = processoDao.getProcessoPorNumero(Integer.parseInt(numeroProcesso));
+        List<Processo> list = processoDao.getProcesso();
+
+        while (list.contains(emp)) {
+            m.addAttribute("command", emp);
+            return "numeroProcesso";
+        }
+        return "numeroProcesso1";
     }
 
     @RequestMapping(value = "/editsaveprocesso", method = RequestMethod.POST)

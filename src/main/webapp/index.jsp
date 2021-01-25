@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -44,7 +45,19 @@
                         <a class="dropdown-item" href="cadprocesso">Cadastrar Processos</a>
                         <a class="dropdown-item" href="viewprocesso">Editar Processo</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="listarprocesso">Procurar Processo</a>
+                        <h6 class="dropdown-header">Procurar Processo</h6>
+                        <form method="get" action="buscarNumProcesso">
+                        <div class="input-group mb-3">
+
+                            <input name="numeroProcesso" type="text" class="form-control" placeholder="Nº Processo" aria-label="Nº Processo" aria-describedby="basic-addon2"/>
+                            <div class="input-group-append">
+
+                                <button class="btn btn-outline-primary" type="submit" type="button">Consultar</button>
+
+                            </div>
+
+                        </div>
+                        </form>
                     </div>
                 </div>
             </li>

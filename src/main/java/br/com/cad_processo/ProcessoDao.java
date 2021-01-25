@@ -2,6 +2,7 @@ package br.com.cad_processo;
 
 import modelo.Processo;
 import modelo.TipoProcesso;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -73,6 +74,15 @@ public class ProcessoDao {
     public Processo getProcessoById(int id) {
         String sql = "select * from processo where id=?";
         return template.queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<Processo>(Processo.class));
+    }
+
+    public Processo getProcessoPorNumero(int numeroProcesso) {
+        String sql = "select * from processo where numeroProcesso=?";
+        try {
+            return template.queryForObject(sql, new Object[]{numeroProcesso}, new BeanPropertyRowMapper<Processo>(Processo.class));}
+        catch (EmptyResultDataAccessException e){
+         return null;
+        }
     }
 
     public List<Processo> getProcesso() {

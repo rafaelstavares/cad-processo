@@ -68,7 +68,7 @@
 
             <div class="form-group col-md-8">
                 <input class="btn btn-primary" type="submit" value="Editar"/>
-                <a class="btn btn-info" role="button" href="cad_processo_war_exploded/index.jsp">Inicio</a>
+                <a class="btn btn-info" role="button" href="index.jsp">Inicio</a>
             </div>
         </div>
 

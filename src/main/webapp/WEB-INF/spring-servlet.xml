@@ -19,10 +19,17 @@
 
     <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://localhost:3306/processo?serverTimezone=UTC"></property>
+        <property name="url" value="jdbc:mysql://db:3306/processo?serverTimezone=UTC"></property>
         <property name="username" value="root"></property>
         <property name="password" value="root"></property>
     </bean>
+
+  <!--  <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+        <property name="username" value="system" />
+        <property name="password" value="oracle" />
+    </bean>-->
     <mvc:annotation-driven/>
     <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="ds"></property>
